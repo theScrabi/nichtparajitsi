@@ -1,6 +1,6 @@
 # nichtparajitsi configuration 
 
-NICHTPARA_INSTANCE=$NICHTPARA_INSTANCE
-NICHTPARA_USR=$NICHTPARA_USR
-NICHTPARA_PWD=$NICHTPARA_PWD
-JITSI_INSTANCE=$JITSI_INSTANCE
+NICHTPARA_INSTANCE=https://my.nichtparasoupserver.lol/kadsen
+NICHTPARA_USR=the-user
+NICHTPARA_PWD=super_secret
+JITSI_INSTANCE=meet.jitsi.lolxyz/my_chatroom
