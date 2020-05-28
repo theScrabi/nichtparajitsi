@@ -10,7 +10,7 @@ nichtpara_usr = environ['NICHTPARA_USR']
 nichtpara_pwd = environ['NICHTPARA_PWD']
 jitsi_instance = environ['JITSI_INSTANCE']
 
-def xdo(command, delay=0.1):
+def xdo(command, delay=0.5):
     sleep(delay)
     system("xdotool " + command)
 
@@ -23,14 +23,14 @@ screensharebutton.click()
 sleep(0.5)
 
 #click "window or screen to share"
-xdo("mousemove 500 190 click 1")
+xdo("mousemove 500 190 click 1", delay=1)
 
 #select "entire screen"
-xdo("mousemove 500 280 click 1")
+xdo("mousemove 500 280 click 1", delay=1)
 
 #select "allow button"
 for i in range(0, 5):
-    xdo("key \"Tab\"")
+    xdo("key \"Tab\"", delay=0.25)
 
 #press "allo"
 xdo("key \"Return\"")
@@ -42,7 +42,7 @@ sleep(0.5)
 browser.switch_to.window(browser.window_handles[1])
 browser.get(nichtpara_instance)
 #enter username
-xdo("type \"" + nichtpar_usr  + "\"")
+xdo("type \"" + nichtpara_usr  + "\"")
 xdo("key \"Tab\"")
 #enter password
 xdo("type \"" + nichtpara_pwd  + "\"")
